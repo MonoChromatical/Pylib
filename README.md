@@ -1,6 +1,6 @@
 To install package
 
-pip install git+https://github.com/MonoChromatical/Pylib.git
+py -m pip install git+https://github.com/MonoChromatical/Pylib.git
 
 blueprint import
 
