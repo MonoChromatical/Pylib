@@ -24,7 +24,7 @@ class LinkedList:
         current = self.head
 
         while current:
-            print(current.name , end=" → ")
+            print(current.key , end=" → ")
             current = current.next
 
         print("None")
