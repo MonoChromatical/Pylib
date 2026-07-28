@@ -51,6 +51,9 @@ This project is under active development. New modules and functionality will be 
 
 Issues, suggestions, and pull requests are welcome. If you have an idea for a useful utility or an improvement to an existing module, feel free to contribute.
 
+## Contributers
+MechtrixPrime
+
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
