@@ -1,0 +1,39 @@
+# IDE settings
+.idea/
+.vscode/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Packaging and build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test, coverage, lint, and type-checker output
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Dependency lock file for this reusable library
+uv.lock
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
