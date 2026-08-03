@@ -1,3 +1,11 @@
+---
+name: Pull Request
+about: Submit your completed changes for review
+title: "[PR] "
+labels: ""
+assignees: ""
+---
+
 ## Description
 
 [Provide a brief description of the changes in this PR]
