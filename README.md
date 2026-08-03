@@ -10,12 +10,25 @@ As the library grows, it will include utilities that:
 * Replace simple third-party dependencies where a lightweight alternative is sufficient.
 * Provide reusable helpers that can be shared across multiple projects.
 
+## Available Functions
+
+See the complete library index:
+
+➡️ [PYLIB MASTER INDEX](MASTER_INDEX.md)
+
 ## Installation
 
 Install directly from GitHub:
 
 ```bash
 py -m pip install git+https://github.com/MonoChromatical/Pylib.git
+```
+
+Accessing the index:
+```bash
+import pylib
+
+pylib.show_index()
 ```
 
 ## Usage
