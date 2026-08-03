@@ -7,3 +7,10 @@ name = "PyLib"
 version = "0.1.0"
 description = "My personal Python utility library"
 requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
