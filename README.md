@@ -62,9 +62,14 @@ This project is under active development. New modules and functionality will be 
 
 ## Contributing
 
+Before adding new features, follow the index format:
+
+[Master Index Guide](INDEX_GUIDE.md)
+
 Issues, suggestions, and pull requests are welcome. If you have an idea for a useful utility or an improvement to an existing module, feel free to contribute.
 
 ## Contributers
+
 MechtrixPrime
 
 ## License
