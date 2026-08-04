@@ -1,12 +1,5 @@
-[build-system]
-requires = ["setuptools>=61"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "PyLib"
-version = "0.1.0"
-description = "My personal Python utility library"
-requires-python = ">=3.10"
+[tool.uv.workspace]
+members = ["packages/*"]
 
 [tool.ruff]
 line-length = 88

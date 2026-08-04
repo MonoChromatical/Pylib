@@ -24,3 +24,9 @@ jobs:
 
       - name: Run linter
         run: ruff check .
+
+      - name: Verify package installs
+        run: pip install ./packages/data-structures
+
+      - name: Verify package import
+        run: python -c "from pylib.data_structures.singly_linked_list import SLinkedList"

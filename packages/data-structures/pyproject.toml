@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pylib-data-structures"
+version = "0.1.0"
+description = "Data structure utilities from PyLib"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["pylib.data_structures*"]
+namespaces = true
