@@ -1,72 +1,80 @@
-# Pylib
+<div align="center">
 
-A personal Python utility library containing reusable modules, functions, and tools that extend Python's standard functionality.
+# PyLib
 
-The goal of this repository is to build a collection of lightweight utilities for common tasks without relying on unnecessary third-party dependencies. Where practical, features are implemented using only the Python standard library, making the package easy to install and use in any project.
+### Lightweight Python utilities, installed one domain at a time.
 
-As the library grows, it will include utilities that:
+**Standard-library first · Selective installation · Built to grow**
 
-* Fill gaps in Python's built-in functionality.
-* Replace simple third-party dependencies where a lightweight alternative is sufficient.
-* Provide reusable helpers that can be shared across multiple projects.
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![MIT License](https://img.shields.io/badge/license-MIT-2F855A)](LICENSE)
+[![Lint](https://github.com/MonoChromatical/Pylib/actions/workflows/lint.yml/badge.svg)](https://github.com/MonoChromatical/Pylib/actions/workflows/lint.yml)
+[![Documentation](https://github.com/MonoChromatical/Pylib/actions/workflows/docs.yml/badge.svg)](https://github.com/MonoChromatical/Pylib/actions/workflows/docs.yml)
 
-## Documentation
+[Documentation](https://monochromatical.github.io/Pylib/) ·
+[Package guides](https://monochromatical.github.io/Pylib/packages/) ·
+[Contributing](https://monochromatical.github.io/Pylib/contributing.html)
 
-Browse the hosted documentation:
+</div>
 
-[PyLib documentation](https://monochromatical.github.io/Pylib/)
+---
 
-The documentation source is also available in the [docs](docs) directory.
+## Why PyLib?
+
+PyLib is a growing collection of reusable Python utilities that fills gaps in
+the standard library without introducing unnecessary third-party runtime
+dependencies.
+
+- Install only the broad package domain you need.
+- Use consistent imports beneath the shared `pylib` namespace.
+- Rely on focused, understandable implementations.
+- Find complete examples and API details in the hosted documentation.
 
 ## Installation
 
-Install the data structures package directly from GitHub:
+Choose a package from the
+[package guides](https://monochromatical.github.io/Pylib/packages/), then replace
+`PACKAGE_DIRECTORY` in the Git installation blueprint:
 
 ```bash
-py -m pip install "git+https://github.com/MonoChromatical/Pylib.git#subdirectory=packages/data-structures"
+py -m pip install "git+https://github.com/MonoChromatical/Pylib.git#subdirectory=packages/PACKAGE_DIRECTORY"
 ```
 
-Each package in this monorepo is independently installable, so users can install only the domain they need.
+When a distribution is published to a Python package index, use its documented
+distribution name:
 
-## Usage
-
-Import modules using the following structure:
-
-```python
-from pylib.<package_name>.<module_name> import *
+```bash
+py -m pip install DISTRIBUTION_NAME
 ```
 
-Or import only the specific objects you need:
+Package guides provide the exact installation name, repository directory,
+import path, examples, and supported API.
 
-```python
-from pylib.<package_name>.<module_name> import MyClass
-```
+## Documentation
 
-## Philosophy
+The [PyLib documentation](https://monochromatical.github.io/Pylib/) contains:
 
-Pylib is built around a few simple principles:
+- Getting-started and installation guidance
+- Package-specific tutorials and examples
+- Concise generated API references
+- Contribution guidelines
+- A step-by-step Sphinx documentation guide
 
-* **Minimal dependencies** – Prefer the Python standard library whenever possible.
-* **Reusable** – Write utilities that can be shared across multiple projects.
-* **Lightweight** – Keep implementations simple and efficient.
-* **Expandable** – Continue adding new modules and utilities as the library evolves.
-
-Rather than depending on several small third-party packages, the aim is to build a single collection of commonly used utilities that can be reused across future projects.
-
-## Status
-
-This project is under active development. New modules and functionality will be added over time, and APIs may change as the library matures.
+Documentation source is maintained in [`docs/`](docs/).
 
 ## Contributing
 
-Before adding new features, follow the [contribution guide](docs/contributing.rst).
+Issues and pull requests are welcome. Read the
+[contribution guide](https://monochromatical.github.io/Pylib/contributing.html)
+before implementing a feature, and follow the
+[Sphinx documentation guide](https://monochromatical.github.io/Pylib/documenting.html)
+when adding or changing public APIs.
 
-Issues, suggestions, and pull requests are welcome. If you have an idea for a useful utility or an improvement to an existing module, feel free to contribute.
+## Status
 
-## Contributers
-
-MechtrixPrime
+PyLib is under active development. Public APIs may evolve as the project
+matures.
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+PyLib is available under the [MIT License](LICENSE).
