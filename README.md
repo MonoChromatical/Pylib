@@ -10,11 +10,13 @@ As the library grows, it will include utilities that:
 * Replace simple third-party dependencies where a lightweight alternative is sufficient.
 * Provide reusable helpers that can be shared across multiple projects.
 
-## Available Functions
+## Documentation
 
-See the complete library index:
+Browse the hosted documentation:
 
-➡️ [PYLIB MASTER INDEX](MASTER_INDEX.md)
+[PyLib documentation](https://monochromatical.github.io/Pylib/)
+
+The documentation source is also available in the [docs](docs) directory.
 
 ## Installation
 
@@ -24,7 +26,7 @@ Install the data structures package directly from GitHub:
 py -m pip install "git+https://github.com/MonoChromatical/Pylib.git#subdirectory=packages/data-structures"
 ```
 
-Each package in this monorepo is independently installable. Currently, data-structures is the only package.
+Each package in this monorepo is independently installable, so users can install only the domain they need.
 
 ## Usage
 
@@ -57,9 +59,7 @@ This project is under active development. New modules and functionality will be 
 
 ## Contributing
 
-Before adding new features, follow the index format:
-
-[Master Index Guide](INDEX_GUIDE.md)
+Before adding new features, follow the [contribution guide](docs/contributing.rst).
 
 Issues, suggestions, and pull requests are welcome. If you have an idea for a useful utility or an improvement to an existing module, feel free to contribute.
 

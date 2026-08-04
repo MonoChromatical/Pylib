@@ -37,3 +37,4 @@ uv.lock
 # Operating system metadata
 .DS_Store
 Thumbs.db
+docs/_build/
