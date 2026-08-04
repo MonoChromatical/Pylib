@@ -1,0 +1,98 @@
+:root {
+  --pylib-radius: 0.55rem;
+}
+
+.content {
+  line-height: 1.7;
+}
+
+.content article {
+  padding-bottom: 4rem;
+}
+
+.content h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.035em;
+  margin-bottom: 1.2rem;
+}
+
+.content h2 {
+  border-bottom: 1px solid var(--color-background-border);
+  letter-spacing: -0.02em;
+  margin-top: 2.7rem;
+  padding-bottom: 0.45rem;
+}
+
+.content h3 {
+  margin-top: 2rem;
+}
+
+.sidebar-brand-text {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sidebar-tree .reference {
+  border-radius: 0.35rem;
+}
+
+.sidebar-tree .current-page > .reference {
+  font-weight: 650;
+}
+
+.highlight,
+.literal-block-wrapper,
+.admonition,
+table.docutils {
+  border-radius: var(--pylib-radius);
+}
+
+.highlight {
+  border: 1px solid var(--color-background-border);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+}
+
+.highlight pre {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  padding: 1.1rem 1.25rem;
+}
+
+code.literal {
+  border: 1px solid var(--color-inline-code-border);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.3rem;
+}
+
+.admonition {
+  box-shadow: none;
+}
+
+table.docutils {
+  border: 1px solid var(--color-background-border);
+  display: table;
+  overflow: hidden;
+  width: 100%;
+}
+
+table.docutils th,
+table.docutils td {
+  padding: 0.7rem 0.85rem;
+}
+
+@media (min-width: 97rem) {
+  .content {
+    width: 52rem;
+  }
+}
+
+@media (max-width: 46rem) {
+  .content h1 {
+    font-size: 2.1rem;
+  }
+
+  .highlight pre {
+    font-size: 0.82rem;
+  }
+}
