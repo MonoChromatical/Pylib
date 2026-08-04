@@ -18,18 +18,13 @@ See the complete library index:
 
 ## Installation
 
-Install directly from GitHub:
+Install the data structures package directly from GitHub:
 
 ```bash
-py -m pip install git+https://github.com/MonoChromatical/Pylib.git
+py -m pip install "git+https://github.com/MonoChromatical/Pylib.git#subdirectory=packages/data-structures"
 ```
 
-Accessing the index:
-```bash
-import pylib
-
-pylib.show_index()
-```
+Each package in this monorepo is independently installable. Currently, data-structures is the only package.
 
 ## Usage
 
