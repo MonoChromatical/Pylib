@@ -71,3 +71,13 @@ class DoublyLinkedList:
             elements.append(temp.data)
             temp = temp.next
         return elements
+
+    def display_backward(self):
+        elements = []
+        temp = self._tail
+
+        while temp:
+            elements.append(temp.data)
+            temp = temp.prev
+
+        return elements
