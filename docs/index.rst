@@ -4,8 +4,8 @@ Welcome to PyLib
 A universal, growing collection of reusable Python utilities that fills gaps in
 the standard library without introducing third-party runtime dependencies.
 
-PyLib is organized as a monorepo of independently installable packages. You can
-install the domain you need instead of downloading every utility in the project.
+PyLib is a monorepo of independently installable packages, so users install only
+the domain they need.
 
 .. important::
 
@@ -14,38 +14,30 @@ install the domain you need instead of downloading every utility in the project.
 Get started
 -----------
 
-Install an individual distribution directly from the repository. For example:
+Choose the domain containing the utility you need from :doc:`packages/index`.
+Each package guide provides its exact installation command, imports, and usage
+examples.
+
+PyLib packages follow this reusable Git installation blueprint:
 
 .. code-block:: console
 
-   py -m pip install "git+https://github.com/MonoChromatical/Pylib.git#subdirectory=packages/data-structures"
+   py -m pip install "git+https://github.com/MonoChromatical/Pylib.git#subdirectory=packages/PACKAGE_DIRECTORY"
 
-Create a linked list in a few lines:
-
-.. code-block:: python
-
-   from pylib.data_structures.singly_linked_list import SLinkedList
-
-   linked = SLinkedList()
-   linked.add_key(10)
-   linked.add_key(20)
-   linked.display_linkedlist()
-
-.. code-block:: text
-
-   10 → 20 → None
+Replace `PACKAGE_DIRECTORY` with the repository directory shown in the selected
+package guide. See :doc:`getting-started` for the complete installation process.
 
 Explore PyLib
 -------------
 
 :doc:`getting-started`
-   Installation, requirements, and your first example.
+   Installation requirements and the reusable package-installation blueprint.
 
 :doc:`packages/index`
    Guides for every available package and feature.
 
 :doc:`api/index`
-   Exact public classes, methods, and source references.
+   Exact public classes, methods, signatures, and docstrings.
 
 :doc:`contributing`
    Coding standards and the complete feature contribution workflow.
@@ -57,7 +49,7 @@ Why PyLib?
 * **Reusable:** share focused utilities across many projects.
 * **Lightweight:** keep implementations understandable and efficient.
 * **Selective:** install only the broad package domain you need.
-* **Expandable:** grow into new domains without turning into one large install.
+* **Expandable:** grow into new domains without becoming one large install.
 
 .. toctree::
    :hidden:
