@@ -55,3 +55,11 @@ class DoublyLinkedList:
 
         print(f"Data Node with key {key} not found")
 
+    def search(self, key):
+        temp = self._head
+        while temp:
+            if temp.data == key:
+                return True
+            temp = temp.next
+        return False
+
