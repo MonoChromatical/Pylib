@@ -34,3 +34,24 @@ class DoublyLinkedList:
         new_node.next = self._head
         self._head.prev = new_node
         self._head = new_node
+
+    def delete(self, key):
+        temp = self._head
+
+        while temp:
+            if temp.data == key:
+                if temp.prev:
+                    temp.prev.next = temp.next
+                else:
+                    self._head = temp.next
+
+                if temp.next:
+                    temp.next.prev = temp.prev
+
+                print(f"Deleted data node with the value {key}")
+                return
+
+            temp = temp.next
+
+        print(f"Data Node with key {key} not found")
+
