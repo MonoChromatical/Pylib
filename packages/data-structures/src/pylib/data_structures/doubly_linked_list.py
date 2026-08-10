@@ -63,3 +63,11 @@ class DoublyLinkedList:
             temp = temp.next
         return False
 
+    def display_forward(self):
+        elements = []
+        temp = self._head
+
+        while temp:
+            elements.append(temp.data)
+            temp = temp.next
+        return elements
