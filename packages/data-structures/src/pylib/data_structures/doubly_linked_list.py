@@ -11,3 +11,15 @@ class DoublyLinkedList:
 
     def is_empty(self):
         return self._head is None
+
+    def add_data(self, data):
+        new_node = _Node(data)
+
+        if self.is_empty():
+            self._head = new_node
+            self._tail = new_node
+            return
+
+        new_node.prev = self._tail
+        self._tail.next = new_node
+        self._tail = new_node
