@@ -34,11 +34,11 @@ Google-style sections through Sphinx's Napoleon extension:
 
 .. code-block:: python
 
-   def add_key(self, key):
+   def add_data(self, data):
        """Append a value to the end of the list.
 
        Args:
-           key: Value to store in the new node.
+           data: Value to store in the new node.
 
        Returns:
            None.
@@ -168,13 +168,13 @@ Install documentation tools:
 
 .. code-block:: console
 
-   uv pip install --python .venv/Scripts/python.exe -r requirements-docs.txt
+   py -m pip install -r requirements-docs.txt
 
 Build the site:
 
 .. code-block:: console
 
-   .venv/Scripts/python.exe -m sphinx -W --keep-going -b html docs docs/_build/html
+   py -m sphinx -W --keep-going -b html docs docs/_build/html
 
 The `-W` option treats warnings as failures. Fix every warning.
 
@@ -183,7 +183,7 @@ Step 8: preview the site locally
 
 .. code-block:: console
 
-   .venv/Scripts/python.exe -m http.server 8000 --directory docs/_build/html
+   py -m http.server 8000 --directory docs/_build/html
 
 Open `http://localhost:8000` and check navigation, light and dark themes, code
 highlighting, links, examples, API signatures, and mobile-width readability.

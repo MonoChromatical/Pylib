@@ -9,8 +9,7 @@ Before you begin
 
 * Confirm the feature does not add an unnecessary third-party runtime dependency.
 * Choose the existing package domain that best owns the feature.
-* Create a new distribution only when real code exists for a genuinely separate
-  domain.
+* Create a new distribution only when real code exists for a separate domain.
 * Keep imports beneath the shared `pylib` namespace.
 * Discuss breaking public API changes before implementation.
 
@@ -24,71 +23,51 @@ Place the implementation beneath the matching distribution:
 
 .. code-block:: text
 
-   packages/<distribution>/src/pylib/<package>/<module>.py
+   packages/PACKAGE_DIRECTORY/src/pylib/PACKAGE_NAME/MODULE_NAME.py
 
-Use lowercase `snake_case` module names and descriptive public class, function,
-method, and variable names.
+Use lowercase `snake_case` module names and descriptive public names.
 
 2. Implement the feature
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Prefer Python's standard library.
-* Keep behaviour focused and predictable.
-* Handle important empty, invalid, and boundary cases.
-* Add docstrings to every public class, method, and function.
-* Avoid undocumented public objects.
+Prefer Python's standard library, keep behaviour predictable, handle important
+boundary cases, and document every public class, method, and function.
 
 3. Add tests
 ~~~~~~~~~~~~
 
-Tests should cover normal use, edge cases, and expected failure behaviour. A new
-feature is not complete until its examples and public behaviour have been tested.
+Cover normal use, edge cases, expected failures, and examples. A public feature
+is not complete until its documented behaviour is tested.
 
-4. Document the package guide
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4. Update documentation
+~~~~~~~~~~~~~~~~~~~~~~~
 
-Update the appropriate page under `docs/packages`. Every feature guide must
-include:
+Update the relevant package guide and generated API page. The package guide
+should teach usage; the API page should provide signatures and docstrings.
 
-* its full module path and exact import statement;
-* what it does, why it exists, and when to use it;
-* a list of supported capabilities;
-* a complete basic usage example and expected output;
-* every public class and its important attributes;
-* every public method or function;
-* parameters and return behaviour;
-* method-level examples and important edge cases.
+Follow :doc:`documenting` for the authoritative feature-guide checklist,
+reStructuredText syntax, navigation, API generation, and preview instructions.
 
-5. Update the API reference
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Add the module to the corresponding page under `docs/api` so Sphinx can generate
-a reference from its docstrings. Do not use the generated API page as a
-replacement for the user-focused package guide.
-
-For detailed Sphinx syntax, navigation, API generation, and preview instructions,
-follow :doc:`documenting`.
-
-6. Run project checks
+5. Run project checks
 ~~~~~~~~~~~~~~~~~~~~~
+
+Replace `PACKAGE_DIRECTORY` before running the package-install command:
 
 .. code-block:: console
 
    ruff check .
    pytest
-   py -m pip install ./packages/<distribution>
+   py -m pip install ./packages/PACKAGE_DIRECTORY
    py -m sphinx -W --keep-going -b html docs docs/_build/html
 
-7. Review the finished change
+6. Review the finished change
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Confirm imports and examples work exactly as documented, generated files are not
 included, and the change does not create placeholder package directories.
 
-Documentation checklist
------------------------
-
-Before submitting a feature, confirm:
+Submission checklist
+--------------------
 
 .. list-table::
    :header-rows: 1
@@ -97,31 +76,14 @@ Before submitting a feature, confirm:
    * - Requirement
      - Complete
    * - Correct package and module location
-     - ☐
-   * - Exact import path
-     - ☐
-   * - Description and intended use
-     - ☐
-   * - Complete usage example and output
-     - ☐
-   * - Public classes and attributes documented
-     - ☐
-   * - Public methods and functions documented
-     - ☐
-   * - Parameters and return behaviour documented
-     - ☐
-   * - Edge cases documented and tested
-     - ☐
-   * - Sphinx build passes without warnings
-     - ☐
-
-Building these docs
--------------------
-
-.. code-block:: console
-
-   py -m pip install -r requirements-docs.txt
-   py -m sphinx -W --keep-going -b html docs docs/_build/html
-
-Serve `docs/_build/html` locally to check navigation, search, examples, and API
-output before submitting the change.
+     - [ ]
+   * - Exact installation and import commands
+     - [ ]
+   * - User guide and public docstrings updated
+     - [ ]
+   * - Normal, edge, and failure cases tested
+     - [ ]
+   * - Ruff and pytest pass
+     - [ ]
+   * - Sphinx builds without warnings
+     - [ ]
