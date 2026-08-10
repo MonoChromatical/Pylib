@@ -5,4 +5,6 @@ class _Node:
         self.prev: _Node | None = None
 
 class DoublyLinkedList:
-    pass
+    def __init__(self):
+        self._head = None
+        self._tail = None
