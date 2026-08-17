@@ -33,7 +33,7 @@ jobs:
         run: pip install ./packages/data-structures
 
       - name: Verify package import
-        run: python -c "from pylib.data_structures import SinglyLinkedList"
+        run: python -c "from lazypye.data_structures import SinglyLinkedList"
 
       - name: Run tests
         run: pytest
