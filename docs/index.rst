@@ -1,5 +1,5 @@
 Welcome to LazyPye
-================
+==================
 
 A universal, growing collection of reusable Python utilities that fills gaps in
 the standard library without introducing third-party runtime dependencies.
@@ -28,7 +28,7 @@ Replace `PACKAGE_DIRECTORY` with the repository directory shown in the selected
 package guide. See :doc:`getting-started` for the complete installation process.
 
 Explore LazyPye
--------------
+---------------
 
 :doc:`getting-started`
    Installation requirements and the reusable package-installation blueprint.
@@ -43,7 +43,7 @@ Explore LazyPye
    Coding standards and the complete feature contribution workflow.
 
 Why LazyPye?
-----------
+------------
 
 * **Standard-library first:** avoid unnecessary runtime dependencies.
 * **Reusable:** share focused utilities across many projects.
